@@ -1,0 +1,89 @@
+@media (max-width: 600px) {
+
+    header {
+        position: relative;
+    }
+
+    header nav {
+        display: block;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 50%;
+        margin-right: 0;
+        background-color: #15304c;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.35s ease-in-out;
+        border-radius: 0 0 0 1px;
+        
+    }
+
+    header nav.active {
+        max-height: 250px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    nav li {
+        padding: 1px 0;
+        width: 50%;
+    }
+
+    nav li:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Oddělení položek */
+    }
+
+    header nav li {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+        color: white;
+        font-size: 23px;
+    }
+
+    .sub-header {
+        padding: 0 28px;
+        justify-content: flex-start;
+    }
+
+    .search-bar {
+        display: none;
+        position: absolute;
+        top: 45px;
+        right: 10px;
+        width: 80%;
+        background-color: rgba(255, 255, 255, 0.9);
+        color: black;
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .search-icon {
+        display: block;
+    }
+
+    .content {
+        margin-left: 20px;
+        margin-right: 20px;
+        min-width: 300px;
+    }
+}
+
+@media (min-width: 600px){
+    header nav {
+        display: block !important;       
+    }
+}
